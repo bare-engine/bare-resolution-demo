@@ -14,23 +14,14 @@ export class ResolutionDemo extends Scene
         bare.AddGameObject("bg");
 
         this.infoText = new TextObject(this, {
-            //fill: "#ffffff",
             fontSize: 8,
             fontFamily: 'monospace',
         });
-        //bare.AddGameObject(this.infoText);
-
-        this.Layout();
     }
 
     OnUpdate(deltaTime: number): void
     {
         this.Layout();
-    }
-
-    OnResize(): void
-    {
-        //this.Layout();
     }
 
     OnRender(): void
