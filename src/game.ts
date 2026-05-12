@@ -26,12 +26,12 @@ export class ResolutionDemo extends Scene
 
     OnRender(): void
     {
-        rapid.withTransform(() => {
-            rapid.drawRect(125, 75, Color.fromHex('#ffffff6d'));
-        }, {
-            x: 98,
-            y: 16
-        })
+        rapid.drawRect({ 
+            position: new Vec2(98, 16),
+            width: 125, 
+            height: 75, 
+            color: Color.fromHex('#ffffff6d')
+        });
 
         this.infoText.Render();
 
