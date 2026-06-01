@@ -11,7 +11,7 @@ export class ResolutionDemo extends Scene
 
     OnStart()
     {
-        bare.AddGameObject("bg");
+        this.AddGameObject("bg");
 
         this.infoText = new TextObject(this, {
             fontSize: 8,
@@ -56,7 +56,7 @@ export class ResolutionDemo extends Scene
             `logic: ${Math.round(bare.width)} x ${Math.round(bare.height)}\n` +
             `css: ${rapid.canvas.clientWidth} x ${rapid.canvas.clientHeight}\n` +
             `dpr: ${rapid.dpr}\n` +
-            `resolutionScale: ${bareEngine.resolutionScale.toPrecision(5)}\n` +
+            `resolutionScale: ${bare.resolutionScale.toPrecision(5)}\n` +
             `\n` +
             `mouse-x: ${Math.round(this.mouseController.screen.position.x)}\n` +
             `mouse-y: ${Math.round(this.mouseController.screen.position.y)}\n`
@@ -72,8 +72,8 @@ StartBare(ResolutionDemo, {
     antiAlias: false,
     textureFilter: TextureFilterMode.NEAREST,
     resolution: {
-        gameWidth: 320,
-        gameHeight: 107,
+        width: 320,
+        height: 107,
         scale: CanvasScale.Fit,
         integerScale: false,
         position: CanvasPosition.Center
