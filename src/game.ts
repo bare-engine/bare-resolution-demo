@@ -21,7 +21,19 @@ export class ResolutionDemo extends Scene
 
     OnUpdate(deltaTime: number): void
     {
-        this.Layout();
+        this.infoText.SetText(
+            `logic: ${Math.round(bare.width)} x ${Math.round(bare.height)}\n` +
+            `css: ${rapid.canvas.clientWidth} x ${rapid.canvas.clientHeight}\n` +
+            `dpr: ${rapid.dpr}\n` +
+            `resolutionScale: ${bare.resolutionScale.toPrecision(5)}\n` +
+            `\n` +
+            `mouse-x: ${Math.round(this.mouseController.screen.position.x)}\n` +
+            `mouse-y: ${Math.round(this.mouseController.screen.position.y)}\n`
+        );
+
+        this.infoText
+            .SetPosition(108, 20)
+            .SetPivot(0, 0);
     }
 
     OnRender(): void
@@ -48,23 +60,6 @@ export class ResolutionDemo extends Scene
             closed: true,
             color: borderColor
         });
-    }
-
-    private Layout()
-    {
-        this.infoText.SetText(
-            `logic: ${Math.round(bare.width)} x ${Math.round(bare.height)}\n` +
-            `css: ${rapid.canvas.clientWidth} x ${rapid.canvas.clientHeight}\n` +
-            `dpr: ${rapid.dpr}\n` +
-            `resolutionScale: ${bare.resolutionScale.toPrecision(5)}\n` +
-            `\n` +
-            `mouse-x: ${Math.round(this.mouseController.screen.position.x)}\n` +
-            `mouse-y: ${Math.round(this.mouseController.screen.position.y)}\n`
-        );
-
-        this.infoText
-            .SetPosition(108, 20)
-            .SetPivot(0, 0);
     }
 }
 
