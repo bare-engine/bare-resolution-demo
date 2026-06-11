@@ -27,8 +27,8 @@ export class ResolutionDemo extends Scene
             `dpr: ${rapid.dpr}\n` +
             `resolutionScale: ${bare.resolutionScale.toPrecision(5)}\n` +
             `\n` +
-            `mouse-x: ${Math.round(this.mouseController.screen.position.x)}\n` +
-            `mouse-y: ${Math.round(this.mouseController.screen.position.y)}\n`
+            `mouse-x: ${Math.round(bare.mouse.screen.position.x)}\n` +
+            `mouse-y: ${Math.round(bare.mouse.screen.position.y)}\n`
         );
 
         this.infoText
