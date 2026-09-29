@@ -1,6 +1,8 @@
 {
-  "baseEntities": {
-    "ANY": {}
-  },
-  "entities": {}
+  "basePrefabs": [
+    {
+      "name": "ANY"
+    }
+  ],
+  "prefabs": []
 }

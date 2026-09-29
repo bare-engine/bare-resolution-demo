@@ -27,5 +27,7 @@
   "dependencies": {
     "bare-engine": "github:BareEngine/BareEngine"
   },
-  "bareEngine": {}
+  "bareEngine": {
+    "gameId": "16ca0850-a43c-4629-85bf-398bf7ae416e"
+  }
 }
