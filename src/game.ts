@@ -50,7 +50,7 @@ export class ResolutionDemo extends Scene
         const borderColor = Color.Black;
 
         rapid.drawLine({
-            points: Vec2.FromArray([
+            points: Vec2.fromArray([
                 [0, 0],
                 [bare.width, 0],
                 [bare.width, bare.height],
