@@ -2,14 +2,14 @@ import { CanvasPosition, CanvasScale, Color, Scene, StartBare, TextObject, Textu
 
 export class ResolutionDemo extends Scene
 {
-    private infoText: TextObject;
+    private infoText!: TextObject;
 
     constructor()
     {
         super({ UI: true, resize: true });
     }
 
-    OnStart()
+    override OnStart()
     {
         this.AddGameObject("bg");
 
@@ -19,7 +19,7 @@ export class ResolutionDemo extends Scene
         });
     }
 
-    OnUpdate(deltaTime: number): void
+    override OnUpdate(deltaTime: number): void
     {
         this.infoText.SetText(
             `logic: ${Math.round(bare.width)} x ${Math.round(bare.height)}\n` +
@@ -36,7 +36,7 @@ export class ResolutionDemo extends Scene
             .SetPivot(0, 0);
     }
 
-    OnRender(): void
+    override OnRender(): void
     {
         rapid.drawRect({ 
             position: new Vec2(98, 16),
